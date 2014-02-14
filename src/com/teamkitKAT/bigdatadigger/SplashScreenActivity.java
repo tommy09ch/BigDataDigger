@@ -44,7 +44,7 @@ public class SplashScreenActivity extends Activity {
 		if (cache.exists()) {
 			return new Intent(this, MainActivity.class);
 		} else {
-			File dir = new File(sdPath + "/Innutrac/vals");
+			File dir = new File(sdPath + "/BigDataDigger/vals");
 			dir.mkdirs();
 			cache = new File(dir, "cache");
 			try {
