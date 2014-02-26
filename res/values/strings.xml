@@ -9,7 +9,11 @@
     <string name="title_activity_welcome_message">WelcomeMessageActivity</string>
     <string name="app_description">Description of app here</string>
     <string name="search">Search</string>
+    <string name="simp_search">Simple Search</string>
+    <string name="adv_search">Advance Search</string>
     <string name="title_activity_result">ResultActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="select_categ">Select a Category:</string>
+    <string name="title_activity_simple_search">SimpleSearchActivity</string>
+    <string name="title_activity_advance_search">AdvanceSearchActivity</string>
 
 </resources>

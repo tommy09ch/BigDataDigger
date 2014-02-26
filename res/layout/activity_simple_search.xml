@@ -7,28 +7,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".WelcomeMessageActivity" >
+    tools:context=".SimpleSearchActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
+    <EditText
+        android:id="@+id/et_searchKey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="@string/app_description"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/WhiteSmoke" />
+        android:background="@drawable/round_edit_text_border"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:ems="10"
+        android:height="35dp"
+        android:hint="@string/search"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/WhiteSmoke" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
-        android:id="@+id/gobtn"
+        android:id="@+id/btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_searchKey"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_marginBottom="15dp"
+        android:layout_alignRight="@+id/et_searchKey"
         android:background="@drawable/go_btn"
-        android:text="@string/continue_button" />
+        android:text="@string/search" />
 
 </RelativeLayout>

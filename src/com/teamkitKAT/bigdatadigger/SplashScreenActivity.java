@@ -1,10 +1,5 @@
 package com.teamkitKAT.bigdatadigger;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import android.os.*;
 import android.app.Activity;
 import android.content.Intent;
@@ -22,8 +17,8 @@ public class SplashScreenActivity extends Activity {
 
 			@Override
 			public void run() {
-				Intent i = checkForFirstLoad();
-				startActivity(i);
+				startActivity(new Intent(SplashScreenActivity.this,
+						MainActivity.class));
 				finish();
 			}
 		}, 2000);
@@ -36,26 +31,4 @@ public class SplashScreenActivity extends Activity {
 		return true;
 	}
 
-	public Intent checkForFirstLoad() {
-		String sdPath = Environment.getExternalStorageDirectory()
-				.getAbsolutePath();
-		File cache = new File(sdPath + "/Innutrac/vals/cache");
-
-		if (cache.exists()) {
-			return new Intent(this, MainActivity.class);
-		} else {
-			File dir = new File(sdPath + "/BigDataDigger/vals");
-			dir.mkdirs();
-			cache = new File(dir, "cache");
-			try {
-				FileOutputStream f = new FileOutputStream(cache);
-				f.close();
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			return new Intent(this, WelcomeMessageActivity.class);
-		}
-	}
 }

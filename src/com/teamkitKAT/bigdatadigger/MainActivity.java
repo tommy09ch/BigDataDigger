@@ -15,15 +15,27 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		Button searchBtn = (Button) findViewById(R.id.searchBtn);
+		Button simpSearch = (Button) findViewById(R.id.btn_simpSearch);
+		Button advSearch = (Button) findViewById(R.id.btn_advSearch);
 
-		searchBtn.setOnClickListener(new OnClickListener() {
+		simpSearch.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				startActivity(new Intent(MainActivity.this,
-						ResultActivity.class));
+						SimpleSearchActivity.class));
+			}
+
+		});
+		
+		advSearch.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(MainActivity.this,
+						AdvanceSearchActivity.class));
 			}
 
 		});
