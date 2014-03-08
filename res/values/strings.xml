@@ -15,5 +15,8 @@
     <string name="select_categ">Select a Category:</string>
     <string name="title_activity_simple_search">SimpleSearchActivity</string>
     <string name="title_activity_advance_search">AdvanceSearchActivity</string>
+    <string name="title_activity_display_info">DisplayInfoActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_temporary">TemporaryActivity</string>
 
 </resources>

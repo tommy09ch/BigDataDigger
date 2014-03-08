@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="AliceBlue">#f0f8ff</color>
     <color name="Azure">#e0eeee</color>
     <color name="Wheat">#ffe7ba</color>
@@ -9,6 +10,9 @@
     <color name="LightSkyBlue3">#8db6cd</color>
     <color name="LightSkyBlue2">#a4d3ee</color>
     <color name="base_background">#1E2526</color>
-    <color name="btn_normal">#A0B842</color> 
+    <color name="btn_normal">#A0B842</color>
     <color name="btn_pressed">#70822E</color>
+    <color name="btn_normal2">#33B5E5</color>
+    <color name="btn_pressed2">#0099CC</color>
+
 </resources>

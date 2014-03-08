@@ -9,27 +9,79 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/btn_simpSearch"
+    <TextView
+        android:id="@+id/search_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btn_advSearch"
-        android:background="@drawable/go_btn"
-        android:height="200dp"
-        android:text="@string/simp_search" />
-    
-    <Button
-        android:id="@+id/btn_advSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:height="200dp"
-        android:background="@drawable/go_btn"
-        android:text="@string/adv_search" />
-    
+        android:layout_alignParentTop="true"
+        android:text="Searching All"
+        android:textColor="@color/WhiteSmoke" />
+
+    <EditText
+        android:id="@+id/et_searchKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/search_description"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_edit_text_border"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:ems="10"
+        android:height="35dp"
+        android:hint="Enter a query"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/WhiteSmoke" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/et_searchKey"
+        android:layout_marginTop="20dp"
+        android:text="Select search option:"
+        android:textColor="@color/WhiteSmoke" />
+
+    <Button
+        android:id="@+id/searchCateg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_searchKey"
+        android:layout_alignRight="@+id/et_searchKey"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_searchoption"
+        android:text="Search by Category" />
+
+    <Button
+        android:id="@+id/searchAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_searchKey"
+        android:layout_alignRight="@+id/et_searchKey"
+        android:layout_below="@+id/searchCateg"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_searchoption"
+        android:text="Search All" />
+
+    <Button
+        android:id="@+id/searchGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/searchAll"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/searchAll"
+        android:layout_marginTop="105dp"
+        android:background="@drawable/btn_searchgo"
+        android:text="Search!" />
 
 </RelativeLayout>

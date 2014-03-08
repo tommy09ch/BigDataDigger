@@ -34,12 +34,16 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.teamkitKAT.bigdatadigger.SimpleSearchActivity"
-            android:label="@string/title_activity_simple_search" >
-        </activity>
-        <activity
             android:name="com.teamkitKAT.bigdatadigger.AdvanceSearchActivity"
             android:label="@string/title_activity_advance_search" >
+        </activity>
+        <activity
+            android:name="com.teamkitKAT.bigdatadigger.DisplayInfoActivity"
+            android:label="@string/title_activity_display_info" >
+        </activity>
+        <activity
+            android:name="com.teamkitKAT.bigdatadigger.DisplayActivity"
+            android:label="@string/title_activity_temporary" >
         </activity>
     </application>
 
