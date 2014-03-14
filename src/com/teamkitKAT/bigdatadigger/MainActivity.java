@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	final String[] CATEGORY = { "Order", "Address", "Customer", "Payment",
-			"Ordered Item", "Item" };
+			"Item" };
 	String selectedCateg = null;
 
 	@Override
@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
 					public void onClick(DialogInterface dialog, int which) {
 						selectedCateg = CATEGORY[which];
 						searchDes.setText("Searching by: " + CATEGORY[which]);
-						searchKey.setHint("Enter in the ID");
+						searchKey.setHint("Enter in an ID");
 						searchCateg.setSelected(true);
 						searchAll.setSelected(false);
 					}

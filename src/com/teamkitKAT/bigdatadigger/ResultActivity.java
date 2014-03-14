@@ -20,6 +20,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -58,12 +59,15 @@ public class ResultActivity extends Activity {
 
 		if (getIntent().hasExtra("allkey")) {
 			String searchKey = getIntent().getStringExtra("allkey");
-			// incorporate searchKey with URL string
+			searchKey = searchKey.replaceAll("\\s+", "");
 			url_string = url_string.concat("SearchServices/" + searchKey);
 			searchType = 1;
 		} else if (getIntent().hasExtra("categ")) {
-			String searchKey = getIntent().getStringExtra("categ") + "/"
-					+ getIntent().getStringExtra("categkey");
+			String categ = getIntent().getStringExtra("categ") + "/";
+			String categKey = getIntent().getStringExtra("categkey");
+			categKey = categKey.replaceAll("\\s+", "");
+			String searchKey = categ + categKey;
+			Log.e("Debug", searchKey);
 			url_string = url_string.concat("LookupServices/" + searchKey);
 			searchType = 2;
 		}
@@ -227,10 +231,12 @@ public class ResultActivity extends Activity {
 					co.setDepositReceived(robj.getDouble("DepositReceived"));
 					JSONArray items = robj.getJSONArray("Items");
 					if (items.length() != 0) {
-						ContractOrderedItem coi = new ContractOrderedItem();
-						ContractItem ci = new ContractItem();
+						ContractOrderedItem coi;
+						ContractItem ci;
 						ArrayList<ContractOrderedItem> coiList = new ArrayList<ContractOrderedItem>();
 						for (int j = 0; j < items.length(); j++) {
+							ci = new ContractItem();
+							coi = new ContractOrderedItem();
 							JSONObject oiObj = items.getJSONObject(j);
 							coi.setNumberOrdered(oiObj.getInt("NumberOrdered"));
 							JSONObject itemObj = oiObj.getJSONObject("Item");
