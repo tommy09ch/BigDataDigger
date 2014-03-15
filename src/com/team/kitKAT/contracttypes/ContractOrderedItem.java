@@ -7,10 +7,10 @@ public class ContractOrderedItem implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -6858862298245048128L;
-	int NumberOrdered;
+	double NumberOrdered;
 	ContractItem Item;
 
-	public ContractOrderedItem(int numberOrdered, ContractItem item) {
+	public ContractOrderedItem(double numberOrdered, ContractItem item) {
 		super();
 		NumberOrdered = numberOrdered;
 		Item = item;
@@ -26,11 +26,11 @@ public class ContractOrderedItem implements Serializable {
 				+ Item.getShortDescription();
 	}
 
-	public int getNumberOrdered() {
+	public double getNumberOrdered() {
 		return NumberOrdered;
 	}
 
-	public void setNumberOrdered(int numberOrdered) {
+	public void setNumberOrdered(double numberOrdered) {
 		NumberOrdered = numberOrdered;
 	}
 

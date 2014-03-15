@@ -3,6 +3,7 @@ package com.teamkitKAT.bigdatadigger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -59,13 +60,14 @@ public class ResultActivity extends Activity {
 
 		if (getIntent().hasExtra("allkey")) {
 			String searchKey = getIntent().getStringExtra("allkey");
-			searchKey = searchKey.replaceAll("\\s+", "");
+			searchKey = searchKey.replaceAll("\\s+", "%20").toUpperCase(Locale.US);
+			Log.e("Debug", searchKey);
 			url_string = url_string.concat("SearchServices/" + searchKey);
 			searchType = 1;
 		} else if (getIntent().hasExtra("categ")) {
 			String categ = getIntent().getStringExtra("categ") + "/";
 			String categKey = getIntent().getStringExtra("categkey");
-			categKey = categKey.replaceAll("\\s+", "");
+			categKey = categKey.replaceAll("\\s+", "%20").toUpperCase(Locale.US);
 			String searchKey = categ + categKey;
 			Log.e("Debug", searchKey);
 			url_string = url_string.concat("LookupServices/" + searchKey);
@@ -264,7 +266,7 @@ public class ResultActivity extends Activity {
 					ca.setCountry(robj.getString("Country"));
 					ca.setState(robj.getString("State"));
 					ca.setCity(robj.getString("City"));
-					ca.setZip(robj.getInt("Zip"));
+					ca.setZip(robj.getString("Zip"));
 					ca.setPhone1(robj.getString("Phone1"));
 					ca.setPhone2(robj.getString("Phone2"));
 					ca.setPhone3(robj.getString("Phone3"));
@@ -299,7 +301,7 @@ public class ResultActivity extends Activity {
 					payment.add(cp);
 				} else if (ctype.equalsIgnoreCase("Ordered Item")) {
 					ContractOrderedItem coi = new ContractOrderedItem();
-					coi.setNumberOrdered(robj.getInt("NumberOrdered"));
+					coi.setNumberOrdered(robj.getDouble("NumberOrdered"));
 					ContractItem ci = new ContractItem();
 					ci.setItemId(robj.getString("ItemId"));
 					ci.setCost(robj.getDouble("Cost"));

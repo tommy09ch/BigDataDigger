@@ -15,7 +15,7 @@ public class ContractAddress implements Serializable {
 	String Country;
 	String State;
 	String City;
-	int Zip;
+	String Zip;
 	String Phone1;
 	String Phone2;
 	String Phone3;
@@ -23,7 +23,7 @@ public class ContractAddress implements Serializable {
 
 	public ContractAddress(String addressId, String customerId,
 			String address1, String address2, String address3, String country,
-			String state, String city, int zip, String phone1, String phone2,
+			String state, String city, String zip, String phone1, String phone2,
 			String phone3, String fax) {
 		super();
 		AddressId = addressId;
@@ -114,11 +114,11 @@ public class ContractAddress implements Serializable {
 		City = city;
 	}
 
-	public int getZip() {
+	public String getZip() {
 		return Zip;
 	}
 
-	public void setZip(int zip) {
+	public void setZip(String zip) {
 		Zip = zip;
 	}
 

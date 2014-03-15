@@ -250,10 +250,8 @@ public class DisplayActivity extends Activity {
 		case 0:
 			newRow("Order Id:", co.getOrderId());
 			newRow("Customer Id:", co.getCustomerId(), R.drawable.infoicon);
-			newRow("Billing Address Id:", co.getBillingAddressId(),
-					R.drawable.infoicon);
-			newRow("Shipping Address Id:", co.getShippingAddressId(),
-					R.drawable.infoicon);
+			newRow("Billing Address Id:", co.getBillingAddressId());
+			newRow("Shipping Address Id:", co.getShippingAddressId());
 			newRow("Created Date:", co.getCreatedDate());
 			newRow("Requested Ship Date:", co.getRequestedShipDate());
 			newRow("Actual Ship Date:", co.getActualShipDate());
@@ -289,7 +287,7 @@ public class DisplayActivity extends Activity {
 			newRow("Country:", ca.getCountry());
 			newRow("State:", ca.getState());
 			newRow("City:", ca.getCity());
-			newRow("Zip:", Integer.toString(ca.getZip()));
+			newRow("Zip:", ca.getZip());
 			newRow("Phone 1:", ca.getPhone1());
 			newRow("Phone 2:", ca.getPhone2());
 			newRow("Phone 3:", ca.getPhone3());
@@ -321,7 +319,7 @@ public class DisplayActivity extends Activity {
 			newRow("Expiration Date:", cp.getExpirationDate());
 			break;
 		case 4:
-			newRow("Number Ordered:", Integer.toString(coi.getNumberOrdered()),
+			newRow("Number Ordered:", Double.toString(coi.getNumberOrdered()),
 					-1);
 			newRow("Item Id:", coi.getItem().getItemId(), R.drawable.infoicon);
 			break;
