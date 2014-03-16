@@ -57,44 +57,49 @@ public final class R {
         public static final int white_field=0x7f020012;
     }
     public static final class id {
-        public static final int action_settings=0x7f090013;
-        public static final int activity_result=0x7f09000a;
+        public static final int action_settings=0x7f090016;
+        public static final int activity_result=0x7f09000d;
         public static final int btnBack=0x7f090000;
         public static final int btnHome=0x7f090002;
-        public static final int et_searchKey=0x7f090005;
-        public static final int expandableListView1=0x7f09000b;
-        public static final int imageView1=0x7f09000d;
-        public static final int img_cell=0x7f090010;
-        public static final int lblListHeader=0x7f090011;
-        public static final int lblListItem=0x7f090012;
+        public static final int et_searchKey=0x7f090008;
+        public static final int expandableListView1=0x7f09000e;
+        public static final int imageView1=0x7f090010;
+        public static final int img_cell=0x7f090013;
+        public static final int lblListHeader=0x7f090014;
+        public static final int lblListItem=0x7f090015;
         public static final int listView1=0x7f090003;
-        public static final int name_cell=0x7f09000e;
-        public static final int searchAll=0x7f090008;
-        public static final int searchCateg=0x7f090007;
-        public static final int searchGo=0x7f090009;
-        public static final int search_description=0x7f090004;
+        public static final int loginBut=0x7f090006;
+        public static final int name_cell=0x7f090011;
+        public static final int pass=0x7f090005;
+        public static final int searchAll=0x7f09000b;
+        public static final int searchCateg=0x7f09000a;
+        public static final int searchGo=0x7f09000c;
+        public static final int search_description=0x7f090007;
         public static final int title=0x7f090001;
-        public static final int tv1=0x7f090006;
-        public static final int tvID=0x7f09000c;
-        public static final int value_cell=0x7f09000f;
+        public static final int tv1=0x7f090009;
+        public static final int tvID=0x7f09000f;
+        public static final int user=0x7f090004;
+        public static final int value_cell=0x7f090012;
     }
     public static final class layout {
         public static final int actionbar_custom_top=0x7f030000;
         public static final int activity_display=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_result=0x7f030003;
-        public static final int activity_splash_screen=0x7f030004;
-        public static final int row_layout=0x7f030005;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_result=0x7f030004;
+        public static final int activity_splash_screen=0x7f030005;
+        public static final int row_layout=0x7f030006;
     }
     public static final class menu {
         public static final int advance_search=0x7f080000;
         public static final int display_info=0x7f080001;
-        public static final int main=0x7f080002;
-        public static final int result=0x7f080003;
-        public static final int simple_search=0x7f080004;
-        public static final int splash_screen=0x7f080005;
-        public static final int temporary=0x7f080006;
-        public static final int welcome_message=0x7f080007;
+        public static final int login=0x7f080002;
+        public static final int main=0x7f080003;
+        public static final int result=0x7f080004;
+        public static final int simple_search=0x7f080005;
+        public static final int splash_screen=0x7f080006;
+        public static final int temporary=0x7f080007;
+        public static final int welcome_message=0x7f080008;
     }
     public static final class string {
         public static final int action_settings=0x7f060002;
@@ -108,6 +113,7 @@ public final class R {
         public static final int simp_search=0x7f060008;
         public static final int title_activity_advance_search=0x7f06000d;
         public static final int title_activity_display_info=0x7f06000e;
+        public static final int title_activity_login=0x7f060011;
         public static final int title_activity_main=0x7f060004;
         public static final int title_activity_result=0x7f06000a;
         public static final int title_activity_simple_search=0x7f06000c;

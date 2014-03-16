@@ -18,5 +18,6 @@
     <string name="title_activity_display_info">DisplayInfoActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_temporary">TemporaryActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>
